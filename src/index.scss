@@ -1,0 +1,39 @@
+/* COLOR VARIABLES */
+
+  $color-dark: #0A3F57;
+  $color-mid: #6FE3C4;
+  $color-light: #B4F7CF;
+  $color-white: #FDFCDE;
+  $color-offwhite: #F0F8BD;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+/* GLOBAL */
+body {
+  background: $color-white;
+}
+
+// =============
+// DEV CSS
+// =============
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
