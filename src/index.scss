@@ -1,23 +1,141 @@
-/* COLOR VARIABLES */
+// VARIABLES
+// Color
+$color-dark: #0A3F57;
+$color-mid: #6FE3C4;
+$color-light: #B4F7CF;
+$color-white: #FDFCDE;
+$color-offwhite: #F0F8BD;
 
-  $color-dark: #0A3F57;
-  $color-mid: #6FE3C4;
-  $color-light: #B4F7CF;
-  $color-white: #FDFCDE;
-  $color-offwhite: #F0F8BD;
+// Font size
+$font-size-xsmall: 1rem;
+$font-size-small: 1.4rem;
+$font-size-large: 1.8rem;
 
+// Spacing size
+$xs-size: 1rem;
+$s-size: 1.2rem;
+$m-size: 1.6rem; 
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
+html {
+  // font-size: 62.5%;
+}
 
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  
+  background: $color-white;
+  color: $color-dark;
 }
 
-/* GLOBAL */
-body {
-  background: $color-white;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
+
+// APP CONTAINER
+.app-container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+// HEADER
+.header {
+  background: $color-dark;
+  padding: $m-size 0;
+  
+
+  &__branding {
+    color: $color-mid;
+    font-size: $font-size-large;
+  }
+
+  &__user-count {
+    color: $color-white;
+    font-size: $font-size-small;
+  }
+}
+
+// MESSAGES
+.messages {
+  &__message {
+    background: $color-mid;
+    border-radius: $font-size-xsmall;
+    margin: $xs-size 0;
+    padding: $xs-size;
+  }
+
+  &__username {
+    font-size: $font-size-small;
+    font-weight: 600;
+    margin-right: $xs-size;
+  }
+
+  &__text {
+    margin: $xs-size 0 0 0;
+    font-size: $font-size-small;
+  }
+}
+
+// CHAT BAR FOOTER
+.chatbar {
+  background: $color-mid;
+  padding: $s-size 0;
+
+  &__name-input {
+    background: $color-white;
+    color: $color-dark;
+    font-size: $font-size-xsmall;
+    padding: .5em 1em;
+    border: none;
+    width: 100px;
+    border-radius: 2em;
+  }
+
+  &__text-input {
+    background: $color-white;
+    color: $color-dark;
+    font-size: $font-size-xsmall;
+    padding: .5em 1em;
+    border: none;
+    width: 100%;
+    margin: 0 $s-size;
+    border-radius: 2em;
+  }
+
+  &__submit-btn {
+    background: $color-dark;
+    color: $color-white;
+    font-size: $font-size-xsmall;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+  }
+
+  &__grid {
+      display: flex;
+  }
+}
+
+// Utility
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 
 // =============
 // DEV CSS
