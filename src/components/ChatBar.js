@@ -9,12 +9,15 @@ const ChatBar = ({ userName, userMessage, handleNameInput, handleMessageInput, h
                     onChange={handleNameInput}
                     type="text"
                     value={userName}
+                    defaultValue={`User${Math.floor(Math.random() * 10000)}`}
+                    name="username"
                 />
                 <input
                     onChange={handleMessageInput}
                     value={userMessage}
                     className="chatbar__text-input"
                     type="text"
+                    name="message"
                 />
                 <input className="chatbar__submit-btn" type="submit" />
             </form>

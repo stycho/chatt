@@ -63,22 +63,40 @@ button:focus {
 
 // MESSAGES
 .messages {
+  overflow: auto;
   &__message {
     background: $color-mid;
     border-radius: $font-size-xsmall;
     margin: $xs-size 0;
     padding: $xs-size;
+
+    &--alert {
+      @extend .messages__message;
+      background: white;
+    }
   }
 
   &__username {
-    font-size: $font-size-small;
-    font-weight: 600;
+    font-size: $font-size-xsmall;
+    font-weight: 900;
     margin-right: $xs-size;
+    color: $color-white;
+  }
+
+  &__username--alert {
+    font-size: $font-size-xsmall;
+    font-weight: 900;
+    margin-right: $xs-size;
+    color: $color-mid;
+  }
+
+  &__time {
+    color: $color-white;
   }
 
   &__text {
     margin: $xs-size 0 0 0;
-    font-size: $font-size-small;
+    font-size: $font-size-xsmall;
   }
 }
 
@@ -154,4 +172,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+// Breakpoints for mobile
+@media only screen and (max-width: 768px) {
+  .container {
+    width: calc(100% - 20px);
+  }
+
 }
